@@ -11,17 +11,17 @@
 > 设置画布大小
 > `turtle.screensize(canvwidth=None,canvheight=None,bg=None)`,参数分别是 画布的宽(像素)，高，背景颜色
 >```python
-turtle.secreen(800,600,"green")
-#返回默认大小(400,300)
-turtle.secreen()
-turtle.setup(width=0.5, height=0.75, startx=None, starty=None)
-#Set the size and position of the main window.
-#Arguments:
-#width: as integer a size in pixels, as float a fraction of the Default is 50% of  float设置占据屏幕的比例
-#height: as integer the height in pixels, as float a fraction of the Default is 75% of
-#(startx, starty): 这一坐标表示矩形窗口左上角顶点的位置, 如果为空,则窗口位于屏幕中心。
-#startx: if positive, starting position in pixels from the left edge of the screen, if negative from the right edge Default, startx=None is to center window horizontally.
-#starty: if positive, starting position in pixels from the top edge of the screen, if negative from the bottom edge Default, starty=None is to center window vertically.
+>turtle.secreen(800,600,"green")
+>#返回默认大小(400,300)
+>turtle.secreen()
+>turtle.setup(width=0.5, height=0.75, startx=None, starty=None)
+>#Set the size and position of the main window.
+>#Arguments:
+>#width: as integer a size in pixels, as float a fraction of the Default is 50% of  float设置占据屏幕的比例
+>#height: as integer the height in pixels, as float a fraction of the Default is 75% of
+>#(startx, starty): 这一坐标表示矩形窗口左上角顶点的位置, 如果为空,则窗口位于屏幕中心。
+>#startx: if positive, starting position in pixels from the left edge of the screen, if negative from the right edge Default, startx=None is to center window horizontally.
+>#starty: if positive, starting position in pixels from the top edge of the screen, if negative from the bottom edge Default, starty=None is to center window vertically.
 >```
 
 >####2.画笔
@@ -76,7 +76,7 @@ turtle.setup(width=0.5, height=0.75, startx=None, starty=None)
 >|`turtle.clear()` | 清空turtle窗口，但是turtle的位置和状态不会改变|
 >|`turtle.reset()` |清空窗口，重置turtle状态为起始状态 |
 >|`turtle.uodo()` | 撤销上一个turtle动作|
->|`turtle.isvisible` | 返回当前 turtle时候可见 | 
+>|`turtle.isvisible` | 返回当前 turtle时候可见 |
 >|`turtle.stamp()` | 复制当前图形|
 >|`turtle.write(s [,font=("font-name",font_size,"font_type"))`|写文本，s为文本内容，font是字体的参数，分别为字体名称，大小和类型；font为可选项，font参数也是可选项|
 >|`turtle.bgcolor()`|Set or return background color of the TurtleScreen |
