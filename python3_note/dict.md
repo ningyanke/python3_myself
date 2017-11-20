@@ -1,6 +1,5 @@
-[TOC]
-###字典
-####定义
+### 字典
+#### 定义
 >字典是另一种可变容器模型，且可存储任意类型对象。
 >字典的每个键值(key=>value)对用冒号(:)分割，每个对之间用逗号(,)分割，整个字典包括在花括号({})中 ,格式如下所示：
 >``d = {key1 : value1, key2 : value2 }
@@ -11,58 +10,58 @@
 
 ####创建字典
 >```python
-dict() -> new empty dictionary
-dict(mapping) -> new dictionary initialized from a mapping object's (key, value) pairs
-dict(iterable) -> new dictionary initialized as if via:
-d = {}    
-for k, v in iterable:
-	d[k] = v
-dict(**kwargs) -> new dictionary initialized with the name=value pairs in the keyword argument list.  For example:  dict(one=1, two=2)"
+>dict() -> new empty dictionary
+>dict(mapping) -> new dictionary initialized from a mapping object's (key, value) pairs
+>dict(iterable) -> new dictionary initialized as if via:
+>d = {}    
+>for k, v in iterable:
+>	d[k] = v
+>dict(**kwargs) -> new dictionary initialized with the name=value pairs in the keyword argument list.  For example:  dict(one=1, two=2)"
 >```
->#####1.创建空字典
+>##### 1.创建空字典
 >```python
-In [132]: d = {}
+>In [132]: d = {}
 >
-In [133]: d1 = dict()
+>In [133]: d1 = dict()
 >```
->#####2.直接创建字典	
+>##### 2.直接创建字典
 >```python
-In [136]: d2 = {"name":'xiaoming','site':'china'}
+>In [136]: d2 = {"name":'xiaoming','site':'china'}
 >
-In [137]: d3 = dict(name='xiaoming',site='china')
+>In [137]: d3 = dict(name='xiaoming',site='china')
 >
-In [139]: d3
-Out[139]: {'name': 'xiaoming', 'site': 'china'}
+>In [139]: d3
+>Out[139]: {'name': 'xiaoming', 'site': 'china'}
 >```
->#####3.利用元祖创建字典
+>##### 3.利用元祖创建字典
 >```python
-In [140]: d4 = dict((['first',1],['second',2]))
+>In [140]: d4 = dict((['first',1],['second',2]))
 >
-In [141]: d4
-Out[141]: {'first': 1, 'second': 2}
+>In [141]: d4
+>Out[141]: {'first': 1, 'second': 2}
 >```
->#####4.使用内建函数`dict.fromkeys`
+>##### 4.使用内建函数`dict.fromkeys`
 >```python
-In [142]: dict.fromkeys.__doc__
-Out[142]: 'Returns a new dict with keys from iterable and values equal to value.'
+>In [142]: dict.fromkeys.__doc__
+>Out[142]: 'Returns a new dict with keys from iterable and values equal to value.'
 >```
 >这样生成的是一个完全新的字典
 >```python
-In [143]: {}.fromkeys(('a','b'),'1')
-Out[143]: {'a': '1', 'b': '1'}
+>In [143]: {}.fromkeys(('a','b'),'1')
+>Out[143]: {'a': '1', 'b': '1'}
 >```
->#####5.使用`zip()`
+>##### 5.使用`zip()`
 >```python
-In [144]: zip((1,2,3),('a','b','c'))
-Out[144]: <zip at 0x7f02710ea7c8>
+>In [144]: zip((1,2,3),('a','b','c'))
+>Out[144]: <zip at 0x7f02710ea7c8>
 >
-In [145]: dict(zip((1,2,3),('a','b','c')))
-Out[145]: {1: 'a', 2: 'b', 3: 'c'}
+>In [145]: dict(zip((1,2,3),('a','b','c')))
+>Out[145]: {1: 'a', 2: 'b', 3: 'c'}
 >```
 >在Python3中`zip()`生成的是一个内建对象,返回的是一个`tuple`
 >```python
-zip(iter1 [,iter2 [...]]) --> zip object
-Return a zip object whose .__next__() method returns a tuple where the i-th element comes from the i-th iterable argument.  The .__next__() method continues until the shortest iterable in the argument sequence is exhausted and then it raises StopIteration.
+>zip(iter1 [,iter2 [...]]) --> zip object
+>Return a zip object whose .__next__() method returns a tuple where the i-th element comes from the i-th iterable argument.  The .__next__() method continues until the shortest iterable in the argument sequence is exhausted and then it raises StopIteration.
 >```
 >#####6.列表生成式转换为字典
 >`dict1 = {(x,j) for x in a for j in b}`
@@ -71,41 +70,42 @@ Return a zip object whose .__next__() method returns a tuple where the i-th elem
 >字典值可以是任何python对象，既可以是标准的对象，也可以是用户定义的，但键不可以
 >1).不允许同一个键出现2次，如果一个键被赋值2次，后一个值会被记住
 >```python
-In [149]: dict1 = {'name':'jack'}
+>In [149]: dict1 = {'name':'jack'}
 >
-In [150]: dict1['name'] = 'python'
+>In [150]: dict1['name'] = 'python'
 >
-In [151]: dict1
-Out[151]: {'name': 'python'}
+>In [151]: dict1
+>Out[151]: {'name': 'python'}
 >```
 >2).键必须是不可变，所以可以用数字，字符串或元组，而列表不行
->```python
-In [152]: dict1 = {['name']:'[python'}
----------------------------------------------------------------------------
-TypeError           Traceback (most recent call last)
-<ipython-input-152-2f8e42b5737d> in <module>()
-----> 1 dict1 = {['name']:'[python'}
+>   ```python
+>In [152]: dict1 = {['name']:'[python'}
+>---------------------------------------------------------------------------
+>TypeError           Traceback (most recent call last)
+><ipython-input-152-2f8e42b5737d> in <module>()
+>----> 1 dict1 = {['name']:'[python'}
 >
-TypeError: unhashable type: 'list'
->```
+>TypeError: unhashable type: 'list'
+>   ```
 
 ####嵌套
->```python
-citys={
-    '北京':{
-        '朝阳':['国贸','CBD','天阶','我爱我家','链接地产'],
-        '海淀':['圆明园','苏州街','中关村','北京大学'],
-        '昌平':['沙河','南口','小汤山',],
-        '怀柔':['桃花','梅花','大山'],
-        '密云':['密云A','密云B','密云C']
-    },
-    '河北':{
-        '石家庄':['石家庄A','石家庄B','石家庄C','石家庄D','石家庄E'],
-        '张家口':['张家口A','张家口B','张家口C'],
-        '承德':['承德A','承德B','承德C','承德D']
-    }
-}
->```
+>
+>    ```python
+>citys={
+>    '北京':{
+>        '朝阳':['国贸','CBD','天阶','我爱我家','链接地产'],
+>        '海淀':['圆明园','苏州街','中关村','北京大学'],
+>        '昌平':['沙河','南口','小汤山',],
+>        '怀柔':['桃花','梅花','大山'],
+>        '密云':['密云A','密云B','密云C']
+>    },
+>    '河北':{
+>        '石家庄':['石家庄A','石家庄B','石家庄C','石家庄D','石家庄E'],
+>        '张家口':['张家口A','张家口B','张家口C'],
+>        '承德':['承德A','承德B','承德C','承德D']
+>    }
+>}
+>    ```
 
 ####字典的内置方法
 |序号|函数及描述|

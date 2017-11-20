@@ -91,9 +91,9 @@
 >|`turtle.mode(mode=None)` |设置乌龟模式（“standard”，“logo”或“world”）并执行重置。如果没有给出模式，则返回当前模式。 <br>模式 初始龟标题 正角度<br>standard 向右（东） 逆时针<br>logo   向上（北） 顺时针
 >|`turtle.delay(delay=None)`| 设置或返回以毫秒为单位的绘图延迟。|
 >|`turtle.begin_poly()`|开始记录多边形的顶点。当前的乌龟位置是多边形的第一个顶点。|
-|`turtle.end_poly()`|停止记录多边形的顶点。当前的乌龟位置是多边形的最后一个顶点。将与第一个顶点相连。|
-|`turtle.get_poly()`|返回最后记录的多边形。|
-|`turtle.register_shape(name, shape=None)`|`>>>turtle.addshape(name, shape=None)`<br>There are three different ways to call this function:<br>name is the name of a gif-file and shape is None: Install the corresponding image shape.<br>>>> `screen.register_shape("turtle.gif")`<br>Note Image shapes do not rotate when turning the turtle, so they do not display the heading of the turtle!<br>name is an arbitrary string and shape is a tuple of pairs of coordinates: Install the corresponding polygon shape.<br>`>>> screen.register_shape("triangle", ((5,-3), (0,5), (-5,-3)))`<br>name is an arbitrary string and shape is a (compound) Shape object: Install the corresponding compound shape.<br>Add a turtle shape to TurtleScreen’s shapelist. Only thusly registered shapes can be used by issuing the command shape(shapename).
+>|`turtle.end_poly()`|停止记录多边形的顶点。当前的乌龟位置是多边形的最后一个顶点。将与第一个顶点相连。|
+>|`turtle.get_poly()`|返回最后记录的多边形。|
+>|`turtle.register_shape(name, shape=None)`|`>>>turtle.addshape(name, shape=None)`<br>There are three different ways to call this function:<br>name is the name of a gif-file and shape is None: Install the corresponding image shape.<br>>>> `screen.register_shape("turtle.gif")`<br>Note Image shapes do not rotate when turning the turtle, so they do not display the heading of the turtle!<br>name is an arbitrary string and shape is a tuple of pairs of coordinates: Install the corresponding polygon shape.<br>`>>> screen.register_shape("triangle", ((5,-3), (0,5), (-5,-3)))`<br>name is an arbitrary string and shape is a (compound) Shape object: Install the corresponding compound shape.<br>Add a turtle shape to TurtleScreen’s shapelist. Only thusly registered shapes can be used by issuing the command shape(shapename).
 
 
 >####3.命令详解

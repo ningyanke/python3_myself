@@ -1,4 +1,4 @@
-[TOC]
+
 ###元组
 
 
@@ -11,32 +11,32 @@
 元组创建很简单，只需要在括号中添加元素，并使用逗号隔开即可。
 
 >```python
-n [119]: tup1 = ('google','baidu')
+> [119]: tup1 = ('google','baidu')
 >
-In [120]: tup2 = (1,2,3)
+>In [120]: tup2 = (1,2,3)
 >
-In [121]: tup3 = ('a','b','c')
+>In [121]: tup3 = ('a','b','c')
 >#当一个元祖中只有一个元素，后面要加逗号，否则变成变量赋值
-In [122]: tup4 = (7,)
+>In [122]: tup4 = (7,)
 >```
 
 
 ####索引切片
 >元组可以使用下标索引来访问元组中的值
 >```python
-#创建一个空的元祖
-In [123]: tu5 = ()
+>#创建一个空的元祖
+>In [123]: tu5 = ()
 >
-In [124]: type(tu5)
-Out[124]: tuple
+>n [124]: type(tu5)
+>Out[124]: tuple
 >
-IndexError: tuple index out of range
-#使用索引访问元祖元素
-In [127]: tup1[0]
-Out[127]: 'google'
+>IndexError: tuple index out of range
+>#使用索引访问元祖元素
+>In [127]: tup1[0]
+>Out[127]: 'google'
 >
-In [128]: tup1[1]
-Out[128]: 'baidu'
+>In [128]: tup1[1]
+>Out[128]: 'baidu'
 >```
 
 
@@ -44,7 +44,7 @@ Out[128]: 'baidu'
 ####嵌套
 >元组可以嵌套元组，列表等
 >```python
-In [129]: tuple1 = (1,2,[1,2,3],(1,2),{'name':'python'})
+>In [129]: tuple1 = (1,2,[1,2,3],(1,2),{'name':'python'})
 >```
 
 ####操作列表
